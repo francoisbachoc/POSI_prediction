@@ -1,0 +1,27 @@
+ource('~/BACHOC/Toulouse/Recherche/Publications/POSI_prediction/Computations/computations/tableMinCoverage_SCAD_MCP.R')
+watershed_protected_intercept_p9_n20_SCAD_1 
+watershed_protected_intercept_p9_n100_SCAD_1 
+watershed_protected_intercept_p9_n20_MCP_1 
+watershed_protected_intercept_p9_n100_MCP_1 
+exchangeable_protected_intercept_p9_n20_SCAD_1 
+exchangeable_protected_intercept_p9_n100_SCAD_1 
+exchangeable_protected_intercept_p9_n20_MCP_1 
+exchangeable_protected_intercept_p9_n100_MCP_1 
+equicorrelated_protected_intercept_p9_n20_SCAD_1 
+equicorrelated_protected_intercept_p9_n100_SCAD_1 
+equicorrelated_protected_intercept_p9_n20_MCP_1 
+equicorrelated_protected_intercept_p9_n100_MCP_1 
+> round(mMinCoverage,2)
+       [,1]  [,2] [,3] [,4]  [,5]  [,6] [,7]  [,8]
+ [1,]  0.90  0.99   -1    1 -1.00  0.84   -1  0.85
+ [2,]  0.88  0.99   -1    1 -1.00  0.99   -1  1.00
+ [3,] -1.00  0.99   -1    1  0.47  0.86   -1  0.86
+ [4,]  0.88  0.99   -1    1  0.87  0.99   -1  1.00
+ [5,]  0.91  1.00   -1    1  0.59  0.90   -1  0.95
+ [6,]  0.90  0.99   -1    1  0.90  0.99   -1  1.00
+ [7,]  0.91  1.00   -1    1  0.58  0.89   -1  0.95
+ [8,]  0.90  0.99   -1    1  0.90  0.99   -1  1.00
+ [9,]  0.88  0.99   -1    1  0.67  0.97   -1  0.98
+[10,]  0.88 -1.00   -1    1  0.89  1.00   -1 -1.00
+[11,] -1.00  0.99   -1    1 -1.00  0.96   -1  0.98
+[12,] -1.00 -1.00   -1    1  0.89 -1.00   -1 -1.00
