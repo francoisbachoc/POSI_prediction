@@ -1,0 +1,2420 @@
+
+R version 3.1.1 (2014-07-10) -- "Sock it to Me"
+Copyright (C) 2014 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R est un logiciel libre livré sans AUCUNE GARANTIE.
+Vous pouvez le redistribuer sous certaines conditions.
+Tapez 'license()' ou 'licence()' pour plus de détails.
+
+R est un projet collaboratif avec de nombreux contributeurs.
+Tapez 'contributors()' pour plus d'information et
+'citation()' pour la façon de le citer dans les publications.
+
+Tapez 'demo()' pour des démonstrations, 'help()' pour l'aide
+en ligne ou 'help.start()' pour obtenir l'aide au format HTML.
+Tapez 'q()' pour quitter R.
+
+> rm( list=ls() )   #equivalent de clear scilab
+> 
+> 
+> ####################################################
+> #loading of the settings
+> ####################################################
+> load("settings.Rdata")
+> source("../functions.r")
+Loaded lars 1.2
+
+Le chargement a nécessité le package : glmnet
+Le chargement a nécessité le package : Matrix
+Le chargement a nécessité le package : foreach
+Loaded glmnet 2.0-2
+
+Le chargement a nécessité le package : intervals
+
+Attachement du package : ‘intervals’
+
+The following object is masked from ‘package:Matrix’:
+
+    expand
+
+> set.seed(1)
+> 
+> 
+> 
+> ######################################################
+> #execution
+> ####################################################
+> 
+> #execution time
+> tStart=Sys.time()
+> 
+> 
+> #preparation of the constants
+> cat("########### \n")
+########### 
+> cat("preparation of the constants \n")
+preparation of the constants 
+> cat("########### \n")
+########### 
+> r=n-p
+> K = Kone(x0,Xc,r,alpha,I)
+> 
+> #choice of the target
+> target=2 #BetaM
+> 
+> #minCoverage probability
+> res=minCoverageProbability(nbeta1,nbeta2,nbatch3,nmc1,nmc2,nmc3,x0,X,Xc,sigma,Sigma,K,target,modelSelection,argModelSelection)
+########### 
+Step 1 
+########### 
+beta number  1 
+1445356177 
+beta number  2 
+1445357090 
+beta number  3 
+1445358041 
+beta number  4 
+1445359054 
+beta number  5 
+1445360062 
+beta number  6 
+1445361036 
+beta number  7 
+1445362037 
+beta number  8 
+1445363018 
+beta number  9 
+1445363997 
+beta number  10 
+1445364878 
+beta number  11 
+1445365793 
+beta number  12 
+1445366740 
+beta number  13 
+1445367663 
+beta number  14 
+1445368562 
+beta number  15 
+1445369455 
+beta number  16 
+1445370369 
+beta number  17 
+1445371308 
+beta number  18 
+1445372199 
+beta number  19 
+1445373149 
+beta number  20 
+1445374038 
+beta number  21 
+1445374936 
+beta number  22 
+1445375891 
+beta number  23 
+1445376917 
+beta number  24 
+1445377919 
+beta number  25 
+1445378886 
+beta number  26 
+1445379841 
+beta number  27 
+1445380780 
+beta number  28 
+1445381742 
+beta number  29 
+1445382696 
+beta number  30 
+1445383692 
+beta number  31 
+1445384802 
+beta number  32 
+1445385916 
+beta number  33 
+1445387045 
+beta number  34 
+1445388103 
+beta number  35 
+1445389203 
+beta number  36 
+1445390276 
+beta number  37 
+1445391350 
+beta number  38 
+1445392386 
+beta number  39 
+1445393458 
+beta number  40 
+1445394528 
+beta number  41 
+1445395617 
+beta number  42 
+1445396722 
+beta number  43 
+1445397761 
+beta number  44 
+1445398785 
+beta number  45 
+1445399819 
+beta number  46 
+1445400871 
+beta number  47 
+1445401990 
+beta number  48 
+1445403109 
+beta number  49 
+1445404169 
+beta number  50 
+1445405328 
+beta number  51 
+1445406439 
+beta number  52 
+1445407530 
+beta number  53 
+1445408610 
+beta number  54 
+1445409739 
+beta number  55 
+1445410810 
+beta number  56 
+1445411866 
+beta number  57 
+1445412887 
+beta number  58 
+1445413933 
+beta number  59 
+1445415004 
+beta number  60 
+1445416103 
+beta number  61 
+1445417161 
+beta number  62 
+1445418271 
+beta number  63 
+1445419360 
+beta number  64 
+1445420488 
+beta number  65 
+1445421604 
+beta number  66 
+1445422708 
+beta number  67 
+1445423849 
+beta number  68 
+1445424937 
+beta number  69 
+1445425972 
+beta number  70 
+1445427062 
+beta number  71 
+1445428171 
+beta number  72 
+1445429281 
+beta number  73 
+1445430360 
+beta number  74 
+1445431465 
+beta number  75 
+1445432579 
+beta number  76 
+1445433632 
+beta number  77 
+1445434665 
+beta number  78 
+1445435740 
+beta number  79 
+1445436819 
+beta number  80 
+1445437860 
+beta number  81 
+1445438942 
+beta number  82 
+1445439986 
+beta number  83 
+1445441080 
+beta number  84 
+1445442185 
+beta number  85 
+1445443274 
+beta number  86 
+1445444383 
+beta number  87 
+1445445424 
+beta number  88 
+1445446446 
+beta number  89 
+1445447505 
+beta number  90 
+1445448573 
+beta number  91 
+1445449609 
+beta number  92 
+1445450647 
+beta number  93 
+1445451651 
+beta number  94 
+1445452660 
+beta number  95 
+1445453696 
+beta number  96 
+1445454771 
+beta number  97 
+1445455883 
+beta number  98 
+1445457008 
+beta number  99 
+1445458093 
+beta number  100 
+1445459263 
+beta number  101 
+1445460421 
+beta number  102 
+1445461501 
+beta number  103 
+1445462530 
+beta number  104 
+1445463633 
+beta number  105 
+1445464779 
+beta number  106 
+1445465881 
+beta number  107 
+1445466920 
+beta number  108 
+1445467976 
+beta number  109 
+1445469124 
+beta number  110 
+1445470278 
+beta number  111 
+1445471363 
+beta number  112 
+1445472485 
+beta number  113 
+1445473509 
+beta number  114 
+1445474597 
+beta number  115 
+1445475682 
+beta number  116 
+1445476785 
+beta number  117 
+1445477831 
+beta number  118 
+1445478977 
+beta number  119 
+1445480050 
+beta number  120 
+1445481094 
+beta number  121 
+1445482177 
+beta number  122 
+1445483267 
+beta number  123 
+1445484348 
+beta number  124 
+1445485452 
+beta number  125 
+1445486564 
+beta number  126 
+1445487615 
+beta number  127 
+1445488651 
+beta number  128 
+1445489712 
+beta number  129 
+1445490820 
+beta number  130 
+1445491906 
+beta number  131 
+1445492972 
+beta number  132 
+1445494016 
+beta number  133 
+1445495092 
+beta number  134 
+1445496170 
+beta number  135 
+1445497299 
+beta number  136 
+1445498281 
+beta number  137 
+1445499322 
+beta number  138 
+1445500439 
+beta number  139 
+1445501494 
+beta number  140 
+1445502517 
+beta number  141 
+1445503538 
+beta number  142 
+1445504606 
+beta number  143 
+1445505729 
+beta number  144 
+1445506800 
+beta number  145 
+1445507818 
+beta number  146 
+1445508898 
+beta number  147 
+1445509924 
+beta number  148 
+1445511071 
+beta number  149 
+1445512124 
+beta number  150 
+1445513188 
+beta number  151 
+1445514238 
+beta number  152 
+1445515241 
+beta number  153 
+1445516288 
+beta number  154 
+1445517394 
+beta number  155 
+1445518483 
+beta number  156 
+1445519596 
+beta number  157 
+1445520647 
+beta number  158 
+1445521749 
+beta number  159 
+1445522770 
+beta number  160 
+1445523858 
+beta number  161 
+1445524919 
+beta number  162 
+1445525991 
+beta number  163 
+1445527105 
+beta number  164 
+1445528193 
+beta number  165 
+1445529291 
+beta number  166 
+1445530367 
+beta number  167 
+1445531448 
+beta number  168 
+1445532511 
+beta number  169 
+1445533591 
+beta number  170 
+1445534657 
+beta number  171 
+1445535758 
+beta number  172 
+1445536853 
+beta number  173 
+1445537956 
+beta number  174 
+1445539067 
+beta number  175 
+1445540177 
+beta number  176 
+1445541269 
+beta number  177 
+1445542383 
+beta number  178 
+1445543411 
+beta number  179 
+1445544462 
+beta number  180 
+1445545554 
+beta number  181 
+1445546593 
+beta number  182 
+1445547691 
+beta number  183 
+1445548744 
+beta number  184 
+1445549775 
+beta number  185 
+1445550836 
+beta number  186 
+1445551871 
+beta number  187 
+1445552871 
+beta number  188 
+1445553896 
+beta number  189 
+1445554948 
+beta number  190 
+1445556067 
+beta number  191 
+1445557132 
+beta number  192 
+1445558218 
+beta number  193 
+1445559306 
+beta number  194 
+1445560403 
+beta number  195 
+1445561488 
+beta number  196 
+1445562592 
+beta number  197 
+1445563735 
+beta number  198 
+1445564821 
+beta number  199 
+1445565875 
+beta number  200 
+1445566951 
+beta number  201 
+1445568032 
+beta number  202 
+1445569086 
+beta number  203 
+1445570231 
+beta number  204 
+1445571280 
+beta number  205 
+1445572408 
+beta number  206 
+1445573529 
+beta number  207 
+1445574625 
+beta number  208 
+1445575692 
+beta number  209 
+1445576795 
+beta number  210 
+1445577887 
+beta number  211 
+1445578943 
+beta number  212 
+1445580047 
+beta number  213 
+1445581083 
+beta number  214 
+1445582220 
+beta number  215 
+1445583342 
+beta number  216 
+1445584495 
+beta number  217 
+1445585607 
+beta number  218 
+1445586652 
+beta number  219 
+1445587708 
+beta number  220 
+1445588771 
+beta number  221 
+1445589873 
+beta number  222 
+1445591034 
+beta number  223 
+1445592168 
+beta number  224 
+1445593302 
+beta number  225 
+1445594420 
+beta number  226 
+1445595509 
+beta number  227 
+1445596524 
+beta number  228 
+1445597595 
+beta number  229 
+1445598725 
+beta number  230 
+1445599852 
+beta number  231 
+1445600859 
+beta number  232 
+1445601939 
+beta number  233 
+1445603070 
+beta number  234 
+1445604159 
+beta number  235 
+1445605214 
+beta number  236 
+1445606277 
+beta number  237 
+1445607305 
+beta number  238 
+1445608350 
+beta number  239 
+1445609425 
+beta number  240 
+1445610477 
+beta number  241 
+1445611531 
+beta number  242 
+1445612606 
+beta number  243 
+1445613728 
+beta number  244 
+1445614843 
+beta number  245 
+1445615876 
+beta number  246 
+1445616906 
+beta number  247 
+1445617953 
+beta number  248 
+1445618934 
+beta number  249 
+1445620021 
+beta number  250 
+1445621087 
+beta number  251 
+1445622116 
+beta number  252 
+1445623239 
+beta number  253 
+1445624353 
+beta number  254 
+1445625461 
+beta number  255 
+1445626555 
+beta number  256 
+1445627679 
+beta number  257 
+1445628813 
+beta number  258 
+1445629965 
+beta number  259 
+1445631060 
+beta number  260 
+1445632100 
+beta number  261 
+1445633148 
+beta number  262 
+1445634256 
+beta number  263 
+1445635333 
+beta number  264 
+1445636383 
+beta number  265 
+1445637411 
+beta number  266 
+1445638428 
+beta number  267 
+1445639490 
+beta number  268 
+1445640534 
+beta number  269 
+1445641571 
+beta number  270 
+1445642627 
+beta number  271 
+1445643701 
+beta number  272 
+1445644812 
+beta number  273 
+1445645861 
+beta number  274 
+1445646915 
+beta number  275 
+1445647949 
+beta number  276 
+1445648982 
+beta number  277 
+1445650057 
+beta number  278 
+1445651166 
+beta number  279 
+1445652244 
+beta number  280 
+1445653302 
+beta number  281 
+1445654339 
+beta number  282 
+1445655379 
+beta number  283 
+1445656401 
+beta number  284 
+1445657429 
+beta number  285 
+1445658473 
+beta number  286 
+1445659604 
+beta number  287 
+1445660674 
+beta number  288 
+1445661733 
+beta number  289 
+1445662880 
+beta number  290 
+1445663962 
+beta number  291 
+1445665066 
+beta number  292 
+1445666183 
+beta number  293 
+1445667306 
+beta number  294 
+1445668448 
+beta number  295 
+1445669567 
+beta number  296 
+1445670694 
+beta number  297 
+1445671801 
+beta number  298 
+1445672986 
+beta number  299 
+1445674110 
+beta number  300 
+1445675208 
+beta number  301 
+1445676309 
+beta number  302 
+1445677342 
+beta number  303 
+1445678407 
+beta number  304 
+1445679533 
+beta number  305 
+1445680525 
+beta number  306 
+1445681533 
+beta number  307 
+1445682588 
+beta number  308 
+1445683611 
+beta number  309 
+1445684661 
+beta number  310 
+1445685723 
+beta number  311 
+1445686818 
+beta number  312 
+1445687828 
+beta number  313 
+1445688868 
+beta number  314 
+1445689919 
+beta number  315 
+1445691048 
+beta number  316 
+1445692174 
+beta number  317 
+1445693202 
+beta number  318 
+1445694209 
+beta number  319 
+1445695275 
+beta number  320 
+1445696350 
+beta number  321 
+1445697406 
+beta number  322 
+1445698489 
+beta number  323 
+1445699545 
+beta number  324 
+1445700611 
+beta number  325 
+1445701647 
+beta number  326 
+1445702682 
+beta number  327 
+1445703713 
+beta number  328 
+1445704789 
+beta number  329 
+1445705807 
+beta number  330 
+1445706880 
+beta number  331 
+1445707899 
+beta number  332 
+1445708936 
+beta number  333 
+1445710022 
+beta number  334 
+1445711082 
+beta number  335 
+1445712231 
+beta number  336 
+1445713272 
+beta number  337 
+1445714315 
+beta number  338 
+1445715439 
+beta number  339 
+1445716529 
+beta number  340 
+1445717625 
+beta number  341 
+1445718815 
+beta number  342 
+1445719950 
+beta number  343 
+1445721054 
+beta number  344 
+1445722176 
+beta number  345 
+1445723338 
+beta number  346 
+1445724485 
+beta number  347 
+1445725567 
+beta number  348 
+1445726695 
+beta number  349 
+1445727815 
+beta number  350 
+1445728952 
+beta number  351 
+1445730078 
+beta number  352 
+1445731170 
+beta number  353 
+1445732257 
+beta number  354 
+1445733306 
+beta number  355 
+1445734386 
+beta number  356 
+1445735428 
+beta number  357 
+1445736471 
+beta number  358 
+1445737508 
+beta number  359 
+1445738571 
+beta number  360 
+1445739693 
+beta number  361 
+1445740747 
+beta number  362 
+1445741783 
+beta number  363 
+1445742921 
+beta number  364 
+1445743985 
+beta number  365 
+1445745108 
+beta number  366 
+1445746100 
+beta number  367 
+1445747135 
+beta number  368 
+1445748272 
+beta number  369 
+1445749380 
+beta number  370 
+1445750455 
+beta number  371 
+1445751570 
+beta number  372 
+1445752653 
+beta number  373 
+1445753772 
+beta number  374 
+1445754889 
+beta number  375 
+1445755986 
+beta number  376 
+1445757046 
+beta number  377 
+1445758037 
+beta number  378 
+1445759061 
+beta number  379 
+1445760041 
+beta number  380 
+1445761102 
+beta number  381 
+1445762170 
+beta number  382 
+1445763218 
+beta number  383 
+1445764316 
+beta number  384 
+1445765371 
+beta number  385 
+1445766472 
+beta number  386 
+1445767584 
+beta number  387 
+1445768711 
+beta number  388 
+1445769847 
+beta number  389 
+1445770971 
+beta number  390 
+1445772051 
+beta number  391 
+1445773144 
+beta number  392 
+1445774246 
+beta number  393 
+1445775349 
+beta number  394 
+1445776468 
+beta number  395 
+1445777597 
+beta number  396 
+1445778760 
+beta number  397 
+1445779824 
+beta number  398 
+1445780884 
+beta number  399 
+1445781909 
+beta number  400 
+1445782900 
+beta number  401 
+1445783969 
+beta number  402 
+1445785016 
+beta number  403 
+1445786121 
+beta number  404 
+1445787225 
+beta number  405 
+1445788307 
+beta number  406 
+1445789411 
+beta number  407 
+1445790597 
+beta number  408 
+1445791644 
+beta number  409 
+1445792691 
+beta number  410 
+1445793740 
+beta number  411 
+1445794797 
+beta number  412 
+1445795873 
+beta number  413 
+1445797015 
+beta number  414 
+1445798094 
+beta number  415 
+1445799187 
+beta number  416 
+1445800276 
+beta number  417 
+1445801396 
+beta number  418 
+1445802470 
+beta number  419 
+1445803625 
+beta number  420 
+1445804743 
+beta number  421 
+1445805840 
+beta number  422 
+1445806906 
+beta number  423 
+1445808019 
+beta number  424 
+1445809203 
+beta number  425 
+1445810351 
+beta number  426 
+1445811495 
+beta number  427 
+1445812594 
+beta number  428 
+1445813638 
+beta number  429 
+1445814683 
+beta number  430 
+1445815781 
+beta number  431 
+1445816887 
+beta number  432 
+1445818016 
+beta number  433 
+1445819129 
+beta number  434 
+1445820254 
+beta number  435 
+1445821371 
+beta number  436 
+1445822384 
+beta number  437 
+1445823400 
+beta number  438 
+1445824414 
+beta number  439 
+1445825481 
+beta number  440 
+1445826617 
+beta number  441 
+1445827726 
+beta number  442 
+1445828870 
+beta number  443 
+1445829989 
+beta number  444 
+1445831126 
+beta number  445 
+1445832222 
+beta number  446 
+1445833315 
+beta number  447 
+1445834404 
+beta number  448 
+1445835428 
+beta number  449 
+1445836528 
+beta number  450 
+1445837593 
+beta number  451 
+1445838695 
+beta number  452 
+1445839779 
+beta number  453 
+1445840856 
+beta number  454 
+1445841937 
+beta number  455 
+1445843025 
+beta number  456 
+1445844181 
+beta number  457 
+1445845257 
+beta number  458 
+1445846256 
+beta number  459 
+1445847323 
+beta number  460 
+1445848453 
+beta number  461 
+1445849587 
+beta number  462 
+1445850639 
+beta number  463 
+1445851681 
+beta number  464 
+1445852752 
+beta number  465 
+1445853797 
+beta number  466 
+1445854843 
+beta number  467 
+1445855854 
+beta number  468 
+1445856920 
+beta number  469 
+1445858020 
+beta number  470 
+1445859133 
+beta number  471 
+1445860222 
+beta number  472 
+1445861272 
+beta number  473 
+1445862334 
+beta number  474 
+1445863471 
+beta number  475 
+1445864627 
+beta number  476 
+1445865755 
+beta number  477 
+1445866902 
+beta number  478 
+1445867968 
+beta number  479 
+1445869021 
+beta number  480 
+1445870067 
+beta number  481 
+1445871174 
+beta number  482 
+1445872267 
+beta number  483 
+1445873384 
+beta number  484 
+1445874480 
+beta number  485 
+1445875528 
+beta number  486 
+1445876589 
+beta number  487 
+1445877646 
+beta number  488 
+1445878735 
+beta number  489 
+1445879858 
+beta number  490 
+1445880867 
+beta number  491 
+1445881942 
+beta number  492 
+1445882956 
+beta number  493 
+1445883979 
+beta number  494 
+1445885052 
+beta number  495 
+1445886164 
+beta number  496 
+1445887294 
+beta number  497 
+1445888386 
+beta number  498 
+1445889479 
+beta number  499 
+1445890532 
+beta number  500 
+1445891520 
+beta number  501 
+1445892605 
+beta number  502 
+1445893652 
+beta number  503 
+1445894698 
+beta number  504 
+1445895749 
+beta number  505 
+1445896886 
+beta number  506 
+1445897979 
+beta number  507 
+1445899006 
+beta number  508 
+1445900075 
+beta number  509 
+1445901181 
+beta number  510 
+1445902262 
+beta number  511 
+1445903359 
+beta number  512 
+1445904444 
+beta number  513 
+1445905487 
+beta number  514 
+1445906586 
+beta number  515 
+1445907748 
+beta number  516 
+1445908859 
+beta number  517 
+1445909944 
+beta number  518 
+1445910968 
+beta number  519 
+1445912065 
+beta number  520 
+1445913192 
+beta number  521 
+1445914226 
+beta number  522 
+1445915262 
+beta number  523 
+1445916331 
+beta number  524 
+1445917444 
+beta number  525 
+1445918558 
+beta number  526 
+1445919688 
+beta number  527 
+1445920804 
+beta number  528 
+1445921921 
+beta number  529 
+1445923020 
+beta number  530 
+1445924166 
+beta number  531 
+1445925180 
+beta number  532 
+1445926178 
+beta number  533 
+1445927240 
+beta number  534 
+1445928295 
+beta number  535 
+1445929367 
+beta number  536 
+1445930421 
+beta number  537 
+1445931446 
+beta number  538 
+1445932430 
+beta number  539 
+1445933450 
+beta number  540 
+1445934463 
+beta number  541 
+1445935488 
+beta number  542 
+1445936509 
+beta number  543 
+1445937604 
+beta number  544 
+1445938706 
+beta number  545 
+1445939763 
+beta number  546 
+1445940803 
+beta number  547 
+1445941841 
+beta number  548 
+1445942873 
+beta number  549 
+1445943968 
+beta number  550 
+1445945012 
+beta number  551 
+1445946109 
+beta number  552 
+1445947185 
+beta number  553 
+1445948235 
+beta number  554 
+1445949217 
+beta number  555 
+1445950260 
+beta number  556 
+1445951295 
+beta number  557 
+1445952355 
+beta number  558 
+1445953391 
+beta number  559 
+1445954451 
+beta number  560 
+1445955492 
+beta number  561 
+1445956524 
+beta number  562 
+1445957551 
+beta number  563 
+1445958674 
+beta number  564 
+1445959721 
+beta number  565 
+1445960763 
+beta number  566 
+1445961813 
+beta number  567 
+1445962843 
+beta number  568 
+1445963903 
+beta number  569 
+1445964993 
+beta number  570 
+1445966039 
+beta number  571 
+1445967010 
+beta number  572 
+1445968036 
+beta number  573 
+1445969085 
+beta number  574 
+1445970178 
+beta number  575 
+1445971290 
+beta number  576 
+1445972320 
+beta number  577 
+1445973372 
+beta number  578 
+1445974461 
+beta number  579 
+1445975500 
+beta number  580 
+1445976548 
+beta number  581 
+1445977625 
+beta number  582 
+1445978651 
+beta number  583 
+1445979768 
+beta number  584 
+1445980861 
+beta number  585 
+1445981960 
+beta number  586 
+1445983025 
+beta number  587 
+1445984078 
+beta number  588 
+1445985105 
+beta number  589 
+1445986155 
+beta number  590 
+1445987176 
+beta number  591 
+1445988235 
+beta number  592 
+1445989255 
+beta number  593 
+1445990309 
+beta number  594 
+1445991430 
+beta number  595 
+1445992532 
+beta number  596 
+1445993573 
+beta number  597 
+1445994624 
+beta number  598 
+1445995708 
+beta number  599 
+1445996805 
+beta number  600 
+1445997936 
+beta number  601 
+1445999025 
+beta number  602 
+1.446e+09 
+beta number  603 
+1446001093 
+beta number  604 
+1446002187 
+beta number  605 
+1446003364 
+beta number  606 
+1446004405 
+beta number  607 
+1446005505 
+beta number  608 
+1446006596 
+beta number  609 
+1446007601 
+beta number  610 
+1446008691 
+beta number  611 
+1446009833 
+beta number  612 
+1446010895 
+beta number  613 
+1446011971 
+beta number  614 
+1446013003 
+beta number  615 
+1446014101 
+beta number  616 
+1446015196 
+beta number  617 
+1446016212 
+beta number  618 
+1446017221 
+beta number  619 
+1446018294 
+beta number  620 
+1446019417 
+beta number  621 
+1446020557 
+beta number  622 
+1446021688 
+beta number  623 
+1446022762 
+beta number  624 
+1446023891 
+beta number  625 
+1446024982 
+beta number  626 
+1446026067 
+beta number  627 
+1446027113 
+beta number  628 
+1446028169 
+beta number  629 
+1446029167 
+beta number  630 
+1446030178 
+beta number  631 
+1446031220 
+beta number  632 
+1446032252 
+beta number  633 
+1446033259 
+beta number  634 
+1446034366 
+beta number  635 
+1446035421 
+beta number  636 
+1446036419 
+beta number  637 
+1446037519 
+beta number  638 
+1446038630 
+beta number  639 
+1446039613 
+beta number  640 
+1446040620 
+beta number  641 
+1446041644 
+beta number  642 
+1446042699 
+beta number  643 
+1446043798 
+beta number  644 
+1446044933 
+beta number  645 
+1446046048 
+beta number  646 
+1446047054 
+beta number  647 
+1446048061 
+beta number  648 
+1446049123 
+beta number  649 
+1446050149 
+beta number  650 
+1446051258 
+beta number  651 
+1446052326 
+beta number  652 
+1446053394 
+beta number  653 
+1446054475 
+beta number  654 
+1446055466 
+beta number  655 
+1446056563 
+beta number  656 
+1446057627 
+beta number  657 
+1446058695 
+beta number  658 
+1446059792 
+beta number  659 
+1446060892 
+beta number  660 
+1446061980 
+beta number  661 
+1446063026 
+beta number  662 
+1446064039 
+beta number  663 
+1446065037 
+beta number  664 
+1446066078 
+beta number  665 
+1446067114 
+beta number  666 
+1446068114 
+beta number  667 
+1446069155 
+beta number  668 
+1446070190 
+beta number  669 
+1446071265 
+beta number  670 
+1446072274 
+beta number  671 
+1446073291 
+beta number  672 
+1446074342 
+beta number  673 
+1446075431 
+beta number  674 
+1446076516 
+beta number  675 
+1446077628 
+beta number  676 
+1446078751 
+beta number  677 
+1446079844 
+beta number  678 
+1446080937 
+beta number  679 
+1446082001 
+beta number  680 
+1446083071 
+beta number  681 
+1446084137 
+beta number  682 
+1446085169 
+beta number  683 
+1446086172 
+beta number  684 
+1446087177 
+beta number  685 
+1446088220 
+beta number  686 
+1446089251 
+beta number  687 
+1446090288 
+beta number  688 
+1446091324 
+beta number  689 
+1446092358 
+beta number  690 
+1446093422 
+beta number  691 
+1446094500 
+beta number  692 
+1446095624 
+beta number  693 
+1446096686 
+beta number  694 
+1446097672 
+beta number  695 
+1446098787 
+beta number  696 
+1446099810 
+beta number  697 
+1446100823 
+beta number  698 
+1446101859 
+beta number  699 
+1446102954 
+beta number  700 
+1446104040 
+beta number  701 
+1446105119 
+beta number  702 
+1446106143 
+beta number  703 
+1446107201 
+beta number  704 
+1446108199 
+beta number  705 
+1446109243 
+beta number  706 
+1446110261 
+beta number  707 
+1446111301 
+beta number  708 
+1446112371 
+beta number  709 
+1446113438 
+beta number  710 
+1446114542 
+beta number  711 
+1446115651 
+beta number  712 
+1446116774 
+beta number  713 
+1446117877 
+beta number  714 
+1446118903 
+beta number  715 
+1446119869 
+beta number  716 
+1446120900 
+beta number  717 
+1446121945 
+beta number  718 
+1446122947 
+beta number  719 
+1446123963 
+beta number  720 
+1446124961 
+beta number  721 
+1446125917 
+beta number  722 
+1446126903 
+beta number  723 
+1446127943 
+beta number  724 
+1446128953 
+beta number  725 
+1446129951 
+beta number  726 
+1446130946 
+beta number  727 
+1446132019 
+beta number  728 
+1446133094 
+beta number  729 
+1446134107 
+beta number  730 
+1446135152 
+beta number  731 
+1446136259 
+beta number  732 
+1446137405 
+beta number  733 
+1446138548 
+beta number  734 
+1446139698 
+beta number  735 
+1446140778 
+beta number  736 
+1446141889 
+beta number  737 
+1446142925 
+beta number  738 
+1446143989 
+beta number  739 
+1446144998 
+beta number  740 
+1446146018 
+beta number  741 
+1446147033 
+beta number  742 
+1446148113 
+beta number  743 
+1446149188 
+beta number  744 
+1446150214 
+beta number  745 
+1446151247 
+beta number  746 
+1446152320 
+beta number  747 
+1446153433 
+beta number  748 
+1446154469 
+beta number  749 
+1446155523 
+beta number  750 
+1446156561 
+beta number  751 
+1446157606 
+beta number  752 
+1446158633 
+beta number  753 
+1446159648 
+beta number  754 
+1446160676 
+beta number  755 
+1446161760 
+beta number  756 
+1446162833 
+beta number  757 
+1446163962 
+beta number  758 
+1446165046 
+beta number  759 
+1446166056 
+beta number  760 
+1446167102 
+beta number  761 
+1446168157 
+beta number  762 
+1446169203 
+beta number  763 
+1446170221 
+beta number  764 
+1446171230 
+beta number  765 
+1446172283 
+beta number  766 
+1446173416 
+beta number  767 
+1446174516 
+beta number  768 
+1446175579 
+beta number  769 
+1446176659 
+beta number  770 
+1446177718 
+beta number  771 
+1446178799 
+beta number  772 
+1446179875 
+beta number  773 
+1446180894 
+beta number  774 
+1446181958 
+beta number  775 
+1446182983 
+beta number  776 
+1446184060 
+beta number  777 
+1446185126 
+beta number  778 
+1446186131 
+beta number  779 
+1446187204 
+beta number  780 
+1446188203 
+beta number  781 
+1446189238 
+beta number  782 
+1446190249 
+beta number  783 
+1446191270 
+beta number  784 
+1446192285 
+beta number  785 
+1446193325 
+beta number  786 
+1446194406 
+beta number  787 
+1446195473 
+beta number  788 
+1446196576 
+beta number  789 
+1446197623 
+beta number  790 
+1446198661 
+beta number  791 
+1446199723 
+beta number  792 
+1446200803 
+beta number  793 
+1446201886 
+beta number  794 
+1446202932 
+beta number  795 
+1446204026 
+beta number  796 
+1446205148 
+beta number  797 
+1446206209 
+beta number  798 
+1446207295 
+beta number  799 
+1446208346 
+beta number  800 
+1446209470 
+beta number  801 
+1446210511 
+beta number  802 
+1446211513 
+beta number  803 
+1446212617 
+beta number  804 
+1446213698 
+beta number  805 
+1446214782 
+beta number  806 
+1446215803 
+beta number  807 
+1446216860 
+beta number  808 
+1446217921 
+beta number  809 
+1446218950 
+beta number  810 
+1446220023 
+beta number  811 
+1446221071 
+beta number  812 
+1446222131 
+beta number  813 
+1446223234 
+beta number  814 
+1446224320 
+beta number  815 
+1446225401 
+beta number  816 
+1446226484 
+beta number  817 
+1446227503 
+beta number  818 
+1446228554 
+beta number  819 
+1446229594 
+beta number  820 
+1446230574 
+beta number  821 
+1446231692 
+beta number  822 
+1446232741 
+beta number  823 
+1446233865 
+beta number  824 
+1446234898 
+beta number  825 
+1446235908 
+beta number  826 
+1446236989 
+beta number  827 
+1446238037 
+beta number  828 
+1446239068 
+beta number  829 
+1446240109 
+beta number  830 
+1446241209 
+beta number  831 
+1446242299 
+beta number  832 
+1446243411 
+beta number  833 
+1446244509 
+beta number  834 
+1446245494 
+beta number  835 
+1446246631 
+beta number  836 
+1446247748 
+beta number  837 
+1446248796 
+beta number  838 
+1446249809 
+beta number  839 
+1446250845 
+beta number  840 
+1446251872 
+beta number  841 
+1446252953 
+beta number  842 
+1446254052 
+beta number  843 
+1446255140 
+beta number  844 
+1446256216 
+beta number  845 
+1446257292 
+beta number  846 
+1446258376 
+beta number  847 
+1446259452 
+beta number  848 
+1446260602 
+beta number  849 
+1446261728 
+beta number  850 
+1446262832 
+beta number  851 
+1446263956 
+beta number  852 
+1446265055 
+beta number  853 
+1446266074 
+beta number  854 
+1446267152 
+beta number  855 
+1446268229 
+beta number  856 
+1446269316 
+beta number  857 
+1446270455 
+beta number  858 
+1446271549 
+beta number  859 
+1446272632 
+beta number  860 
+1446273599 
+beta number  861 
+1446274659 
+beta number  862 
+1446275653 
+beta number  863 
+1446276791 
+beta number  864 
+1446277801 
+beta number  865 
+1446278822 
+beta number  866 
+1446279908 
+beta number  867 
+1446280908 
+beta number  868 
+1446281962 
+beta number  869 
+1446282996 
+beta number  870 
+1446284099 
+beta number  871 
+1446285164 
+beta number  872 
+1446286116 
+beta number  873 
+1446287145 
+beta number  874 
+1446288191 
+beta number  875 
+1446289189 
+beta number  876 
+1446290227 
+beta number  877 
+1446291237 
+beta number  878 
+1446292237 
+beta number  879 
+1446293263 
+beta number  880 
+1446294269 
+beta number  881 
+1446295308 
+beta number  882 
+1446296314 
+beta number  883 
+1446297278 
+beta number  884 
+1446298293 
+beta number  885 
+1446299324 
+beta number  886 
+1446300351 
+beta number  887 
+1446301423 
+beta number  888 
+1446302441 
+beta number  889 
+1446303549 
+beta number  890 
+1446304633 
+beta number  891 
+1446305644 
+beta number  892 
+1446306642 
+beta number  893 
+1446307689 
+beta number  894 
+1446308769 
+beta number  895 
+1446309877 
+beta number  896 
+1446310863 
+beta number  897 
+1446311847 
+beta number  898 
+1446312901 
+beta number  899 
+1446313986 
+beta number  900 
+1446315001 
+beta number  901 
+1446316005 
+beta number  902 
+1446316982 
+beta number  903 
+1446318031 
+beta number  904 
+1446319076 
+beta number  905 
+1446320050 
+beta number  906 
+1446321131 
+beta number  907 
+1446322242 
+beta number  908 
+1446323238 
+beta number  909 
+1446324215 
+beta number  910 
+1446325255 
+beta number  911 
+1446326245 
+beta number  912 
+1446327256 
+beta number  913 
+1446328339 
+beta number  914 
+1446329435 
+beta number  915 
+1446330455 
+beta number  916 
+1446331455 
+beta number  917 
+1446332485 
+beta number  918 
+1446333542 
+beta number  919 
+1446334593 
+beta number  920 
+1446335606 
+beta number  921 
+1446336650 
+beta number  922 
+1446337724 
+beta number  923 
+1446338821 
+beta number  924 
+1446339893 
+beta number  925 
+1446340975 
+beta number  926 
+1446342061 
+beta number  927 
+1446343141 
+beta number  928 
+1446344248 
+beta number  929 
+1446345260 
+beta number  930 
+1446346363 
+beta number  931 
+1446347446 
+beta number  932 
+1446348522 
+beta number  933 
+1446349599 
+beta number  934 
+1446350610 
+beta number  935 
+1446351603 
+beta number  936 
+1446352719 
+beta number  937 
+1446353818 
+beta number  938 
+1446354926 
+beta number  939 
+1446355961 
+beta number  940 
+1446357030 
+beta number  941 
+1446358105 
+beta number  942 
+1446359125 
+beta number  943 
+1446360195 
+beta number  944 
+1446361226 
+beta number  945 
+1446362318 
+beta number  946 
+1446363348 
+beta number  947 
+1446364406 
+beta number  948 
+1446365432 
+beta number  949 
+1446366503 
+beta number  950 
+1446367477 
+beta number  951 
+1446368501 
+beta number  952 
+1446369496 
+beta number  953 
+1446370539 
+beta number  954 
+1446371628 
+beta number  955 
+1446372678 
+beta number  956 
+1446373689 
+beta number  957 
+1446374695 
+beta number  958 
+1446375730 
+beta number  959 
+1446376720 
+beta number  960 
+1446377725 
+beta number  961 
+1446378713 
+beta number  962 
+1446379732 
+beta number  963 
+1446380793 
+beta number  964 
+1446381828 
+beta number  965 
+1446382843 
+beta number  966 
+1446383860 
+beta number  967 
+1446384906 
+beta number  968 
+1446385889 
+beta number  969 
+1446386896 
+beta number  970 
+1446387952 
+beta number  971 
+1446389019 
+beta number  972 
+1446390054 
+beta number  973 
+1446391053 
+beta number  974 
+1446392050 
+beta number  975 
+1446393007 
+beta number  976 
+1446394078 
+beta number  977 
+1446395172 
+beta number  978 
+1446396249 
+beta number  979 
+1446397347 
+beta number  980 
+1446398411 
+beta number  981 
+1446399450 
+beta number  982 
+1446400457 
+beta number  983 
+1446401558 
+beta number  984 
+1446402583 
+beta number  985 
+1446403585 
+beta number  986 
+1446404622 
+beta number  987 
+1446405701 
+beta number  988 
+1446406697 
+beta number  989 
+1446407699 
+beta number  990 
+1446408736 
+beta number  991 
+1446409790 
+beta number  992 
+1446410876 
+beta number  993 
+1446411897 
+beta number  994 
+1446412944 
+beta number  995 
+1446413974 
+beta number  996 
+1446415065 
+beta number  997 
+1446416125 
+beta number  998 
+1446417123 
+beta number  999 
+1446418207 
+beta number  1000 
+1446419232 
+########### 
+Step 2 
+########### 
+beta number  1 
+1446420231 
+beta number  2 
+1446430297 
+beta number  3 
+1446441350 
+beta number  4 
+1446451658 
+beta number  5 
+1446461791 
+beta number  6 
+1446472150 
+beta number  7 
+1446482354 
+beta number  8 
+1446492951 
+beta number  9 
+1446502963 
+beta number  10 
+1446513056 
+beta number  11 
+1446523136 
+beta number  12 
+1446533294 
+beta number  13 
+1446543735 
+beta number  14 
+1446554040 
+beta number  15 
+1446564085 
+beta number  16 
+1446574490 
+beta number  17 
+1446584376 
+beta number  18 
+1446595069 
+beta number  19 
+1446605234 
+beta number  20 
+1446615668 
+beta number  21 
+1446625986 
+beta number  22 
+1446636102 
+beta number  23 
+1446646142 
+beta number  24 
+1446656366 
+beta number  25 
+1446666308 
+beta number  26 
+1446676790 
+beta number  27 
+1446686765 
+beta number  28 
+1446696725 
+beta number  29 
+1446706676 
+beta number  30 
+1446716892 
+beta number  31 
+1446726952 
+beta number  32 
+1446737061 
+beta number  33 
+1446747485 
+beta number  34 
+1446757613 
+beta number  35 
+1446767699 
+beta number  36 
+1446777681 
+beta number  37 
+1446788045 
+beta number  38 
+1446798151 
+beta number  39 
+1446808548 
+beta number  40 
+1446818861 
+beta number  41 
+1446828905 
+beta number  42 
+1446839079 
+beta number  43 
+1446849084 
+beta number  44 
+1446859233 
+beta number  45 
+1446869449 
+beta number  46 
+1446879557 
+beta number  47 
+1446889532 
+beta number  48 
+1446899188 
+beta number  49 
+1446909418 
+beta number  50 
+1446919601 
+beta number  51 
+1446930466 
+beta number  52 
+1446940551 
+beta number  53 
+1446950539 
+beta number  54 
+1446960294 
+beta number  55 
+1446970740 
+beta number  56 
+1446980637 
+beta number  57 
+1446990683 
+beta number  58 
+1447000725 
+beta number  59 
+1447010855 
+beta number  60 
+1447020968 
+beta number  61 
+1447030985 
+beta number  62 
+1447041136 
+beta number  63 
+1447051514 
+beta number  64 
+1447061874 
+beta number  65 
+1447071990 
+beta number  66 
+1447082027 
+beta number  67 
+1447092315 
+beta number  68 
+1447102105 
+beta number  69 
+1447112324 
+beta number  70 
+1447122420 
+beta number  71 
+1447132634 
+beta number  72 
+1447142680 
+beta number  73 
+1447152484 
+beta number  74 
+1447162431 
+beta number  75 
+1447172744 
+beta number  76 
+1447182813 
+beta number  77 
+1447193115 
+beta number  78 
+1447203559 
+beta number  79 
+1447213860 
+beta number  80 
+1447223879 
+beta number  81 
+1447234294 
+beta number  82 
+1447244096 
+beta number  83 
+1447254281 
+beta number  84 
+1447263942 
+beta number  85 
+1447273742 
+beta number  86 
+1447284307 
+beta number  87 
+1447294259 
+beta number  88 
+1447304468 
+beta number  89 
+1447314378 
+beta number  90 
+1447324447 
+beta number  91 
+1447334297 
+beta number  92 
+1447343914 
+beta number  93 
+1447353999 
+beta number  94 
+1447363706 
+beta number  95 
+1447373540 
+beta number  96 
+1447383608 
+beta number  97 
+1447393493 
+beta number  98 
+1447403306 
+beta number  99 
+1447413895 
+beta number  100 
+1447424041 
+########### 
+Step 3 
+########### 
+Monte Carlo batch number  1 
+1447433583 
+Monte Carlo batch number  2 
+1447443305 
+Monte Carlo batch number  3 
+1447452785 
+Monte Carlo batch number  4 
+1447462472 
+Monte Carlo batch number  5 
+1447472226 
+Monte Carlo batch number  6 
+1447482113 
+Monte Carlo batch number  7 
+1447492009 
+Monte Carlo batch number  8 
+1447501493 
+Monte Carlo batch number  9 
+1447511474 
+Monte Carlo batch number  10 
+1447521034 
+Monte Carlo batch number  11 
+1447530487 
+Monte Carlo batch number  12 
+1447540408 
+Monte Carlo batch number  13 
+1447550005 
+Monte Carlo batch number  14 
+1447559581 
+Monte Carlo batch number  15 
+1447569266 
+Monte Carlo batch number  16 
+1447579155 
+Monte Carlo batch number  17 
+1447588780 
+Monte Carlo batch number  18 
+1447598489 
+Monte Carlo batch number  19 
+1447608051 
+Monte Carlo batch number  20 
+1447617894 
+Monte Carlo batch number  21 
+1447627412 
+Monte Carlo batch number  22 
+1447637401 
+Monte Carlo batch number  23 
+1447646952 
+Monte Carlo batch number  24 
+1447656708 
+Monte Carlo batch number  25 
+1447666389 
+Monte Carlo batch number  26 
+1447675993 
+Monte Carlo batch number  27 
+1447685789 
+Monte Carlo batch number  28 
+1447695392 
+Monte Carlo batch number  29 
+1447704738 
+Monte Carlo batch number  30 
+1447714179 
+Monte Carlo batch number  31 
+1447723744 
+Monte Carlo batch number  32 
+1447733414 
+Monte Carlo batch number  33 
+1447743108 
+Monte Carlo batch number  34 
+1447753091 
+Monte Carlo batch number  35 
+1447762895 
+Monte Carlo batch number  36 
+1447772434 
+Monte Carlo batch number  37 
+1447782062 
+Monte Carlo batch number  38 
+1447791644 
+Monte Carlo batch number  39 
+1447801274 
+Monte Carlo batch number  40 
+1447811120 
+Monte Carlo batch number  41 
+1447820740 
+Monte Carlo batch number  42 
+1447830388 
+Monte Carlo batch number  43 
+1447839974 
+Monte Carlo batch number  44 
+1447849437 
+Monte Carlo batch number  45 
+1447859191 
+Monte Carlo batch number  46 
+1447868768 
+Monte Carlo batch number  47 
+1447878256 
+Monte Carlo batch number  48 
+1447887826 
+Monte Carlo batch number  49 
+1447897666 
+Monte Carlo batch number  50 
+1447907130 
+Il y a eu 50 avis ou plus (utilisez warnings() pour voir les 50 premiers)
+> mbeta1 = res$mbeta1
+> mbeta2 = res$mbeta2
+> beta3 = res$beta3
+> vCov1 = res$vCov1
+> vCov2 = res$vCov2
+> vCov3 = res$vCov3
+> vHLCI1 = res$vHLCI1
+> vHLCI2 = res$vHLCI2
+> vHLCI3 = res$vHLCI3
+> vModSize1 = res$vModSize1
+> vModSize2 = res$vModSize2
+> vModSize3 = res$vModSize3
+> minCovP = res$minCovP
+> 
+> 
+> #the total execution time
+> tExec=Sys.time() - tStart
+> 
+> 
+> 
+> ##############################################################
+> #Save of the result
+> ##############################################################
+> save(tExec,mbeta1,mbeta2,beta3,vCov1,vCov2,vCov3,vHLCI1,vHLCI2,vHLCI3,vModSize1,vModSize2,vModSize3,minCovP, file = "res6.Rdata" )
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> proc.time()
+utilisateur     système      écoulé 
+   481604.3    584106.7   2560480.3 

@@ -1,0 +1,363 @@
+
+R version 3.1.1 (2014-07-10) -- "Sock it to Me"
+Copyright (C) 2014 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R est un logiciel libre livré sans AUCUNE GARANTIE.
+Vous pouvez le redistribuer sous certaines conditions.
+Tapez 'license()' ou 'licence()' pour plus de détails.
+
+R est un projet collaboratif avec de nombreux contributeurs.
+Tapez 'contributors()' pour plus d'information et
+'citation()' pour la façon de le citer dans les publications.
+
+Tapez 'demo()' pour des démonstrations, 'help()' pour l'aide
+en ligne ou 'help.start()' pour obtenir l'aide au format HTML.
+Tapez 'q()' pour quitter R.
+
+> rm( list=ls() )   #equivalent de clear scilab
+> 
+> 
+> ####################################################
+> #loading of the settings
+> ####################################################
+> load("settings.Rdata")
+> source("../functions.r")
+Loaded lars 1.2
+
+Le chargement a nécessité le package : glmnet
+Le chargement a nécessité le package : Matrix
+Le chargement a nécessité le package : foreach
+Loaded glmnet 2.0-2
+
+Le chargement a nécessité le package : intervals
+
+Attachement du package : ‘intervals’
+
+The following object is masked from ‘package:Matrix’:
+
+    expand
+
+> set.seed(1)
+> 
+> 
+> 
+> ######################################################
+> #execution
+> ####################################################
+> 
+> #execution time
+> tStart=Sys.time()
+> 
+> 
+> #preparation of the constants
+> cat("########### \n")
+########### 
+> cat("preparation of the constants \n")
+preparation of the constants 
+> cat("########### \n")
+########### 
+> r=n-p
+> K = Knaive(r,alpha)
+> 
+> #choice of the target
+> target=1 #BetaMn
+> 
+> #minCoverage probability
+> res=minCoverageProbability(nbeta1,nbeta2,nbatch3,nmc1,nmc2,nmc3,x0,X,Xc,sigma,Sigma,K,target,modelSelection,argModelSelection)
+########### 
+Step 1 
+########### 
+beta number  1 
+1445356169 
+beta number  2 
+1445357066 
+beta number  3 
+1445357991 
+beta number  4 
+1445358890 
+beta number  5 
+1445359794 
+beta number  6 
+1445360719 
+beta number  7 
+1445361733 
+beta number  8 
+1445362667 
+beta number  9 
+1445363718 
+beta number  10 
+1445364680 
+beta number  11 
+1445365578 
+beta number  12 
+1445366456 
+beta number  13 
+1445367336 
+beta number  14 
+1445368213 
+beta number  15 
+1445369074 
+beta number  16 
+1445369982 
+beta number  17 
+1445370907 
+beta number  18 
+1445371803 
+beta number  19 
+1445372700 
+beta number  20 
+1445373654 
+beta number  21 
+1445374633 
+beta number  22 
+1445375569 
+beta number  23 
+1445376542 
+beta number  24 
+1445377512 
+beta number  25 
+1445378476 
+beta number  26 
+1445379325 
+beta number  27 
+1445380212 
+beta number  28 
+1445381244 
+beta number  29 
+1445382236 
+beta number  30 
+1445383178 
+beta number  31 
+1445384201 
+beta number  32 
+1445385312 
+beta number  33 
+1445386378 
+beta number  34 
+1445387451 
+beta number  35 
+1445388588 
+beta number  36 
+1445389705 
+beta number  37 
+1445390853 
+beta number  38 
+1445391936 
+beta number  39 
+1445392946 
+beta number  40 
+1445393965 
+beta number  41 
+1445394978 
+beta number  42 
+1445396039 
+beta number  43 
+1445397058 
+beta number  44 
+1445398085 
+beta number  45 
+1445399121 
+beta number  46 
+1445400104 
+beta number  47 
+1445401136 
+beta number  48 
+1445402255 
+beta number  49 
+1445403380 
+beta number  50 
+1445404475 
+beta number  51 
+1445405653 
+beta number  52 
+1445406749 
+beta number  53 
+1445407775 
+beta number  54 
+1445408785 
+beta number  55 
+1445409901 
+beta number  56 
+1445410951 
+beta number  57 
+1445411964 
+beta number  58 
+1445413063 
+beta number  59 
+1445414203 
+beta number  60 
+1445415258 
+beta number  61 
+1445416417 
+beta number  62 
+1445417536 
+beta number  63 
+1445418699 
+beta number  64 
+1445419851 
+beta number  65 
+1445420999 
+beta number  66 
+1445422093 
+beta number  67 
+1445423196 
+beta number  68 
+1445424247 
+beta number  69 
+1445425273 
+beta number  70 
+1445426362 
+beta number  71 
+1445427390 
+beta number  72 
+1445428413 
+beta number  73 
+1445429497 
+beta number  74 
+1445430593 
+beta number  75 
+1445431667 
+beta number  76 
+1445432692 
+beta number  77 
+1445433682 
+beta number  78 
+1445434692 
+beta number  79 
+1445435712 
+beta number  80 
+1445436721 
+beta number  81 
+1445437721 
+beta number  82 
+1445438738 
+beta number  83 
+1445439790 
+beta number  84 
+1445440785 
+beta number  85 
+1445441768 
+beta number  86 
+1445442942 
+beta number  87 
+1445444076 
+beta number  88 
+1445445101 
+beta number  89 
+1445446126 
+beta number  90 
+1445447125 
+beta number  91 
+1445448148 
+beta number  92 
+1445449234 
+beta number  93 
+1445450377 
+beta number  94 
+1445451498 
+beta number  95 
+1445452595 
+beta number  96 
+1445453684 
+beta number  97 
+1445454796 
+beta number  98 
+1445455868 
+beta number  99 
+1445456904 
+beta number  100 
+1445457906 
+beta number  101 
+1445458928 
+beta number  102 
+1445459920 
+beta number  103 
+1445461028 
+beta number  104 
+1445462126 
+beta number  105 
+1445463259 
+beta number  106 
+1445464423 
+beta number  107 
+1445465482 
+beta number  108 
+1445466510 
+beta number  109 
+1445467603 
+beta number  110 
+1445468711 
+beta number  111 
+1445469802 
+beta number  112 
+1445470852 
+beta number  113 
+1445471946 
+beta number  114 
+1445473022 
+beta number  115 
+1445474049 
+beta number  116 
+1445475090 
+beta number  117 
+1445476108 
+beta number  118 
+1445477173 
+beta number  119 
+1445478238 
+beta number  120 
+1445479341 
+beta number  121 
+1445480509 
+beta number  122 
+1445481632 
+beta number  123 
+1445482651 
+beta number  124 
+1445483693 
+beta number  125 
+1445484760 
+beta number  126 
+1445485772 
+beta number  127 
+1445486886 
+beta number  128 
+1445487964 
+beta number  129 
+1445489117 
+beta number  130 
+1445490210 
+beta number  131 
+1445491307 
+beta number  132 
+1445492452 
+beta number  133 
+1445493537 
+beta number  134 
+1445494628 
+beta number  135 
+1445495726 
+beta number  136 
+1445496843 
+beta number  137 
+1445497976 
+beta number  138 
+1445499083 
+beta number  139 
+1445500189 
+beta number  140 
+1445501309 
+beta number  141 
+1445502377 
+beta number  142 
+1445503483 
+beta number  143 
+1445504574 
+beta number  144 
+1445505696 
+beta number  145 
+1445506737 
+beta number  146 
+1445507825 
+Terminated
